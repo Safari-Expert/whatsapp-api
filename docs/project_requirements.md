@@ -12,6 +12,8 @@ git clone https://github.com/Safari-Expert/features-backend.git
 git clone https://github.com/Safari-Expert/whatsapp-api.git
 ```
 
+<span style="color: red;">Any work that is being done must be coded on a new branch and merged later after review. </span>
+
 ### Stack
 - **Backend** - Golang (Fiber + GORM)
 - **Frontend** - ReactJS
@@ -36,6 +38,11 @@ The main task is to implement a a chat-ui page and integrate a Wuzapi-API as a c
 ## Architecture Description
 
 The application architecture is designed to be modular and scalable, leveraging microservices and containerization. Here is a detailed description of each component:
+
+**You are sharing the repos** 
+features-frontend and features-backend with another developer.
+- <span style="color: red;">Dev 2 is repsonsible for whatsapp-api integration. </span>
+- <span style="color: blue;">Dev 2 is repsonsible for other integrations </span>
 
 ![Project Structure](./architecture.png)
 
