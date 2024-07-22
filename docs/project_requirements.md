@@ -42,7 +42,7 @@ The application architecture is designed to be modular and scalable, leveraging 
 **You are sharing the repos** 
 features-frontend and features-backend with another developer.
 - <span style="color: red;">Dev 2 is repsonsible for whatsapp-api integration. </span>
-- <span style="color: blue;">Dev 2 is repsonsible for other integrations </span>
+- <span style="color: blue;">Dev 1 is repsonsible for other integrations </span>
 
 ![Project Structure](./architecture.png)
 
