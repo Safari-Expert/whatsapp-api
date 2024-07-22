@@ -1,8 +1,7 @@
 # First Steps:
 
-[**Read the project Requirements:**](docs/project_requirements.md)
-Connect with us on Discord: ![Discord](https://img.shields.io/badge/Discord-ak308465-7289DA)
-**All projects will be delivered and paid via fiverr.**
+- [**Read the project Requirements:**](docs/project_requirements.md)
+- Connect with us on Discord: ![Discord](https://img.shields.io/badge/Discord-ak308465-7289DA)
 
 This is a fork of [@asternic/wuzapi](https://github.com/asternic/wuzapi) 
 
