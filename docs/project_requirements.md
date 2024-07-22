@@ -37,7 +37,7 @@ The main task is to implement a a chat-ui page and integrate a Wuzapi-API as a c
 
 The application architecture is designed to be modular and scalable, leveraging microservices and containerization. Here is a detailed description of each component:
 
-![Project Structure](./docs/architecture.png)
+![Project Structure](./architecture.png)
 
 1. **main-frontend**:
     - We are using the LizAnt react template - https://ur0.jp/i23Kz
