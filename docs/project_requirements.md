@@ -1,12 +1,16 @@
 
-## Contact
+# To get started
 
-For any questions, feel free to reach out on Discord: ![Discord](https://img.shields.io/badge/Discord-ak308465-7289DA)
-All projects will be delivered and paid via fiverr.
+- If you haven't already done so - reach to me on Discord: ![Discord](https://img.shields.io/badge/Discord-ak308465-7289DA)
+- Clone the relevant repositories:
 
-# Objective Dev 2
-
-The main task is to implement a a chat-ui page and integrate a Go WhatsApp Web API backend into the LizAnt UI React template provided. This is an integration project requiring webhook and api endpoint work to link the WhatsappAPI service to a web-UI chat page. There are other people working on this project who can assist with various tasks such as K8 deployment and data modelling and sql work. Your work needs to be in scope - Implement the chat functionality. 
+ ```
+mkdir project-master
+cd project-master
+git clone https://github.com/Safari-Expert/features-frontend.git
+git clone https://github.com/Safari-Expert/features-backend.git
+git clone https://github.com/Safari-Expert/whatsapp-api.git
+```
 
 ### Stack
 - **Backend** - Golang (Fiber + GORM)
@@ -14,7 +18,11 @@ The main task is to implement a a chat-ui page and integrate a Go WhatsApp Web A
 - **Architecture** - K8 + NGINX / Traefik
 - **Database** - PostgreSQL
 
-## Deliverables:
+# Project Objective
+
+The main task is to implement a a chat-ui page and integrate a Wuzapi-API as a chat API service into wider project and the LizAnt UI React template provided. This is an integration project. You are not expected to make changes to whatsapp-api repo beyong deployment and configurations. There are other people working on this project who can assist with various tasks. Your work needs to be in scope - Implement the chat API and frontend functionality. 
+
+### Deliverables:
 
 - **Fulfil the main deliverable:** Integrate Wuzapi API into the Chat UI page as an independent service routed through ingress
 - A docker-compose framework to deploy each component
@@ -24,16 +32,12 @@ The main task is to implement a a chat-ui page and integrate a Go WhatsApp Web A
 - Configure endpoints and link the LizAnt cat UI template to comms-api thrugh ingress. 
 - PostgreSQL database configuration for chat related data shared between users.
 
-## Getting Started:
-
-![Alt text](./architecture.png)
 
 ## Architecture Description
 
 The application architecture is designed to be modular and scalable, leveraging microservices and containerization. Here is a detailed description of each component:
-![Alt text](./architecture.png)
 
-### Proposed Architecture Components
+![Project Structure](./docs/architecture.png)
 
 1. **main-frontend**:
     - We are using the LizAnt react template - https://ur0.jp/i23Kz
