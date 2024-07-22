@@ -46,32 +46,34 @@ features-frontend and features-backend with another developer.
 
 ![Project Structure](./architecture.png)
 
-1. **main-frontend**:
+1. **features-frontend**:
     - We are using the LizAnt react template - https://ur0.jp/i23Kz
-    - See templates inside ./templates/
-    - Uses main-frontend/api/ endpoint
+    - This template is already provided for you ready to use and integrated with features-backend for authorisation
+    - There are rules on how to update this repository please see README.md inside the features-frontend repo.
+    - **Uses features-frontend/api/ endpoint**
 
-2. **main-backend**:
-    - Manages user sessions, authentication
-    - Uses company/api/v1/ endpoint
+2. **features-backend**:
+    - Used to manage user sessions, authentication
+    - There are rules on how to update this repository please see README.md inside the features-backend repo.
+    - **Uses company/api/v1/ endpoint**
   
-3. **comms-api**:
+3. **whatsapp-api**:
+    - You are inside this repo now! 
     - Manages chat functionality, including message storage, retrieval, and real-time updates.
     - Integrates with the existing Go backend for user authentication.
     - [@asternic/wuzapi](https://github.com/asternic/wuzapi)
     - WuzAPI - an implementation of [@tulir/whatsmeow](https://github.com/tulir/whatsmeow) library as a simple RESTful API service with multiple device support and concurrent sessions.
-    - Uses comms-api/api/whatsapp/ endpoint
+    - **Uses whatsapp-api/api/ endpoint**
 
-4. **Database (PostgreSQL)**:
+5. **template-db (PostgreSQL)**:
     - Stores user data, chat messages, and other related information.
   
-5. **Controller**:
+6. **Controller**:
     - Manages and routes requests to the appropriate services. you can use nginx for dev but traefik is the final solution. 
     - https://hub.docker.com/_/traefik
 
-6. **K8**:
-    - Manages multi-container Docker applications.
-    - You should be able to deploy locally using Minikube. 
+7. **Docker**:
+    - we are using docker-compose for all dev. upon delivery all 3 repos you are working in must be up and running and deployable
 
 
 ## Chat Scenarios / Functionality
@@ -87,30 +89,28 @@ There is an organization with multiple users using the React web-app. You can as
 8. **User Chat View** - Other users in the organisations can't see others conversations BUT a user can give read-only access to another user to one of his own chats. 
 
 
-## Chat Frontend Functions
+## Chat Frontend Modifications
 - Modify the chat box for better screen fit.
 - Add a favorites section to pin contacts.
 - Enhance the contact card to integrate user-specific information and tags from the database (we need to display a database 'Tag' and basic contact info on left pane. see screenshot below with dashed line in red. 
 - **Admin Screen:** There is a Profile page already available. YAdd section where user can request a QR code and register their WhatsApp.
 
 ![Alt text](./whatsapp-login.png)
-- 
+
 - **Chat App:** Develop a chat application for users to communicate. Ensure it can handle 3-4 concurrent users.
 
 ![Alt text](./web-app.png)
 
-- 
-
-- 
+ 
 ## MySQL Schema Credentials with Data Example
 
 You can check some dummy data and data model using the credentials here but everything will be migrated to PostgreSQL. 
 
 ```
-User: `engadev`
-Password: `userengadev`
-Host: `45.8.149.43:3306`
-Schema: `data_feeds`
+User: `xxxxxxxx`
+Password: `xxxxxxxx`
+Host: `xxxxxxxx`
+Schema: `xxxxxx`
 ```
 
 ## Notes on the Data
