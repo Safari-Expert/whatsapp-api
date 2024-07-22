@@ -67,6 +67,7 @@ features-frontend and features-backend with another developer.
 
 5. **template-db (PostgreSQL)**:
     - Stores user data, chat messages, and other related information.
+    - **A MySQL file with sample schema and dummy data is present in the db folder under main**
   
 6. **Controller**:
     - Manages and routes requests to the appropriate services. you can use nginx for dev but traefik is the final solution. 
