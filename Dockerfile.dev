@@ -1,0 +1,20 @@
+FROM golang:1.21-alpine
+
+RUN apk add --no-cache gcc musl-dev sqlite
+
+WORKDIR /app
+
+# Copy only go.mod and go.sum for caching dependencies
+COPY go.mod ./
+RUN go mod download
+
+COPY . .
+RUN go build -o main .
+
+ENV CGO_ENABLED=1
+ENV WUZAPI_ADMIN_TOKEN SetToRandomAndSecureTokenForAdminTasks
+VOLUME [ "/app/dbdata", "/app/files" ]
+
+EXPOSE 8082
+
+CMD [ "./main", "-logtype", "json" , "-port", "8082" ]

@@ -14,4 +14,4 @@ COPY --from=build /app/server /app/
 VOLUME [ "/app/dbdata", "/app/files" ]
 WORKDIR /app
 ENV WUZAPI_ADMIN_TOKEN SetToRandomAndSecureTokenForAdminTasks
-CMD [ "/app/server", "-logtype", "json" ]
+CMD [ "/app/server", "-logtype", "json", "-port", "8082" ]

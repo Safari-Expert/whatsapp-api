@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  wuzapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8082"
+    volumes:
+      - ./dbdata:/app/dbdata
+      - ./files:/app/files
+      - ./static:/app/static
+
+    environment:
+      - WUZAPI_ADMIN_TOKEN=YourSecureAdminToken
+    networks:
+      - safari-net
+networks:
+  safari-net:
+    external: true
