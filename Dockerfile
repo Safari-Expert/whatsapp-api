@@ -1,5 +1,5 @@
 FROM golang:1.21-alpine AS build
-RUN apk add --no-cache gcc musl-dev
+RUN apk add --no-cache gcc musl-dev sqlite
 RUN mkdir /app
 COPY . /app
 WORKDIR /app
