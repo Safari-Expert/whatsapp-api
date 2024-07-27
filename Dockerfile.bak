@@ -8,7 +8,6 @@ ENV CGO_ENABLED=1
 RUN go build -o server .
 
 FROM alpine:latest
-RUN apk add --no-cache gcc musl-dev sqlite
 RUN mkdir /app
 COPY ./static /app/static
 COPY --from=build /app/server /app/
