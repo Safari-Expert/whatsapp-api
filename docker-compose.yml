@@ -13,7 +13,7 @@ services:
       - ./static:/app/static
 
     environment:
-      - WUZAPI_ADMIN_TOKEN=YourSecureAdminToken
+      - WUZAPI_ADMIN_TOKEN=SetToRandomAndSecureTokenForAdminTasks
     networks:
       - safari-net
 networks:
